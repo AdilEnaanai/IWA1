@@ -14,4 +14,6 @@ public class Produit {
     UUID id;
     String nom;
     float prix;
+    @ManyToOne(cascade = CascadeType.ALL)
+    Categorie categorie;
 }
