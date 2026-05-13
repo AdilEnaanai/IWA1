@@ -20,10 +20,6 @@ public class ProduitController {
         return produitService.getAllProduits();
     }
 
-    @PostMapping("produits")
-    public Produit addProduit(@RequestBody Produit produit) {
-        return produitService.addProduit(produit);
-    }
     @DeleteMapping("produits/{id}")
     public boolean deleteProduit(@PathVariable UUID id) {
         return produitService.deleteProduit(id);
