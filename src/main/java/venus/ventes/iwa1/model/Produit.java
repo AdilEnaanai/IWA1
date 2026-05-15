@@ -15,5 +15,6 @@ public class Produit {
     String nom;
     float prix;
     @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(nullable = false)
     Categorie categorie;
 }

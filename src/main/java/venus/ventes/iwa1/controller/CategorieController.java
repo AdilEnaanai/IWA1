@@ -30,7 +30,7 @@ public class CategorieController {
     }
 
     @DeleteMapping("categories/{id}")
-    public void deleteCategorie(Integer id) {
+    public void deleteCategorie(@PathVariable Integer id) {
         categorieService.deleteCategorie(id);
     }
 
