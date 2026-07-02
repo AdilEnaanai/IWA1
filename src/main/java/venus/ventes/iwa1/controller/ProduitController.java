@@ -10,6 +10,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("ventes")
+@CrossOrigin(origins = "*")
 public class ProduitController {
     final ProduitService produitService;
     public ProduitController(ProduitService produitService) {
@@ -17,7 +18,7 @@ public class ProduitController {
     }
 
     @GetMapping("produits")
-    public List<Produit> getAllProduits(@RequestParam int page, @RequestParam int size) {
+    public List<Produit> getAllProduits(@RequestParam(defaultValue = "10") int page, @RequestParam(defaultValue="20") int size) {
         return produitService.getAllProduits(page,size);
     }
 
